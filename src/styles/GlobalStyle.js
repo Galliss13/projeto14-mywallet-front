@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { basePurple, sidePurple } from "../constants/colors";
+import { basePurple } from "../constants/colors";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -107,6 +107,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1;
     background-color: ${basePurple};
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
   }
   ol,
   ul {
@@ -126,27 +128,6 @@ const GlobalStyle = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
-  }
-  input {
-    width: 326px;
-    height: 58px;
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    ::placeholder {
-      font-family: 'Raleway';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 23px;
-      color: #000000;
-    }
-  }
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: ${sidePurple};
-    border-radius: 5px;
   }
 `;
 

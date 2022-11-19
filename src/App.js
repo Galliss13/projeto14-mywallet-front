@@ -1,9 +1,6 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GlobalStyle from './styles/GlobalStyle'
-import Login from './pages/LoginPage/Login'
-import Register from './pages/RegisterPage/Register'
-import Home from './pages/HomePage/Home'
-import Trade from './pages/TradePage/Trade'
+import { Login, Register, Home, Trade } from './pages/index'
 
 function App() {
   return (

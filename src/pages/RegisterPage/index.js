@@ -1,4 +1,4 @@
-export default function Register(params) {
+export default function Register() {
     return (
         <div>
             Register
