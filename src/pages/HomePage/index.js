@@ -1,7 +1,14 @@
+import Container from "../../components/Container"
+import Header from "./Header"
+import Transactions from "./Transactions"
+import NewTransaction from "./NewTransaction"
+
 export default function Home() {
     return (
-        <div>
-            Home
-        </div>
+        <Container>
+            <Header/>
+            <Transactions/>
+            <NewTransaction/>
+        </Container>
     )
 };

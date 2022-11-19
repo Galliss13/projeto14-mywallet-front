@@ -1,4 +1,6 @@
-import {Button, Container, Form, Input, Logo, StyledLink} from '../../components/Form'
+import {Button, Form, Input, Logo, StyledLink} from '../../components/Form'
+import Container from '../../components/Container'
+
 export default function Register() {
     return (
     <Container>
