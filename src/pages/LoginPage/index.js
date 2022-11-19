@@ -8,8 +8,7 @@ export default function Login() {
                 <Input placeholder="Senha"></Input>
                 <Button>Entrar</Button>
             </Form>
-            <StyledLink>Primeira vez? Cadastre-se</StyledLink>
-
+            <StyledLink to='/register'>Primeira vez? Cadastre-se!</StyledLink>
         </Container>
     )
 };
