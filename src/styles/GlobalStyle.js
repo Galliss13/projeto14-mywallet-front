@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { basePurple, sidePurple } from "../constants/colors";
 
-const GlobalStyle = styled.createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   html,
   body,
   div,
@@ -149,3 +149,5 @@ const GlobalStyle = styled.createGlobalStyle`
     border-radius: 5px;
   }
 `;
+
+export default GlobalStyle
