@@ -1,15 +1,15 @@
-import {IonIcon} from "@ionic/react"
+import {AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai"
 import { Container, TradeButton } from "./style"
 
 export default function NewTransaction() {
     return (
         <Container>
             <TradeButton to='/trade/deposit'>
-                <IonIcon name="add-circle-outline"></IonIcon>
+                <AiOutlinePlusCircle color="#fff" size={20}></AiOutlinePlusCircle>
                 <p>Nova <br></br> Entrada</p>
             </TradeButton>
             <TradeButton to='/trade/outflow'>
-                <IonIcon name="remove-circle-outline"></IonIcon>
+                <AiOutlineMinusCircle color="#fff" size={20}></AiOutlineMinusCircle>
                 <p>Nova <br></br> Saída</p>
             </TradeButton>
         </Container>

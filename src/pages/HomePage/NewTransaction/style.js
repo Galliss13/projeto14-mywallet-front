@@ -13,6 +13,7 @@ const TradeButton = styled(Link)`
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 10px;
     width: 155px;
     height: 114px;
     background-color: ${sidePurple};

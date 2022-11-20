@@ -5,7 +5,7 @@ const Button = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 338px;
+    width: 328px;
     height: 46px;
     background-color: ${sidePurple};
     border: none;

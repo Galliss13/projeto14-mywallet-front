@@ -1,11 +1,14 @@
-import {IonIcon} from "@ionic/react"
+import {IoExitOutline} from "react-icons/io5"
+import { Link } from "react-router-dom"
 import { HeaderContainer, Welcome } from "./style"
 
 export default function Header() {
     return (
         <HeaderContainer>
             <Welcome>Olá, Fulano</Welcome>
-            <IonIcon name="exit-outline" color="#fff" size="10px"></IonIcon>
+            <Link to='/'>
+                <IoExitOutline size={30} color='#fff' fontWeight={100}/>
+            </Link>
         </HeaderContainer>
     )
 };
