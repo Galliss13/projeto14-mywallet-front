@@ -21,11 +21,17 @@ export default function Login() {
     
     function submitForm (e) {
         e.preventDefault()
+
         const promise = api.login({...loginForm})
         promise.then((res) => {
             authLogin(res.data)
+            navigate('/home')
+        })
+        promise.catch((err) => {
+            console.log(err)
         })
     }
+    
     function changeInput (e) {
         setLoginForm({...loginForm, [e.target.name]: e.target.value})
     }
@@ -53,7 +59,7 @@ export default function Login() {
                 required>
                 </Input>
 
-                <Button>Entrar</Button>
+                <Button type={'submit'}>Entrar</Button>
             </Form>
             <StyledLink to='/register'>Primeira vez? Cadastre-se!</StyledLink>
         </Container>
