@@ -20,9 +20,26 @@ function register (body) {
     return promise
 }
 
+//Requisições de transação
+
+function getMoviments (token) {
+    const tokenConfig = aplyDefaultFormatToken(token)
+    const promise = axios.get(`${URL}/transactions,`, tokenConfig)
+    return promise
+}
+
+function postMoviment (body, token) {
+    const tokenConfig = aplyDefaultFormatToken(token)
+    const promise = axios.get(`${URL}/transactions,`, body, tokenConfig)
+    return promise
+}
+
+
 const api = {
     login,
-    register
+    register, 
+    getMoviments,
+    postMoviment
 }
 
 export default api
