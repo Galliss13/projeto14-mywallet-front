@@ -51,7 +51,6 @@ export default function Trade() {
                 value={tradeForm.value}
                 onChange={changeTrade}
                 name='value'
-                type={'number'}
                 placeholder="Valor"
                 required
                 ></Input>

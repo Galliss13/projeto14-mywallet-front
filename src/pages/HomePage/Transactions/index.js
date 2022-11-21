@@ -21,7 +21,7 @@ export default function Transactions() {
   getMoviments()
 
   return (
-    <TransactionContainer>
+    <TransactionContainer moviments ={moviments}>
       
       {moviments ? moviments.map((m) => (
       <Moviment key={m._Id}>

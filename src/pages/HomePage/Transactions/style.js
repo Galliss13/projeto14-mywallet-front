@@ -3,6 +3,7 @@ import styled from "styled-components";
 const TransactionContainer = styled.div`
     display: flex;
     flex-direction: column;
+    ${props => props.moviments? '' : 'justify-content: center;'}
     align-items: center;
     width: 330px;
     height: 446px;

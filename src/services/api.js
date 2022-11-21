@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = 'localhost:5000'
+const URL = '//localhost:5000/'
 
 function aplyDefaultFormatToken(token) {
     return { headers: { Authorization: `Bearer ${token}` } };
@@ -9,14 +9,14 @@ function aplyDefaultFormatToken(token) {
 // Requisições do login
 
 function login (body) {
-    const promise = axios.post(`${URL}/login`, body)
+    const promise = axios.post(`${URL}`, body)
     return promise
 }
 
 //Requisição de registro
 
 function register (body) {
-    const promise = axios.post(`${URL}/register`, body)
+    const promise = axios.post(`${URL}register`, body)
     return promise
 }
 
@@ -24,13 +24,13 @@ function register (body) {
 
 function getMoviments (token) {
     const tokenConfig = aplyDefaultFormatToken(token)
-    const promise = axios.get(`${URL}/transactions,`, tokenConfig)
+    const promise = axios.get(`${URL}transactions`, tokenConfig)
     return promise
 }
 
 function postMoviment (body, token) {
     const tokenConfig = aplyDefaultFormatToken(token)
-    const promise = axios.get(`${URL}/transactions,`, body, tokenConfig)
+    const promise = axios.post(`${URL}transactions`, body, tokenConfig)
     return promise
 }
 

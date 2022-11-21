@@ -23,10 +23,17 @@ export default function Register() {
 
         const promise = api.register({...signupForm})
         promise.then((res) => {
+            res.status(201).send('OK')
             navigate('/')
         })
         promise.catch((err) => {
-            console.log(err)
+            if (err.response.status === 409) {
+                alert(err.response.data)
+            }
+            if (err.response.status === 422) {
+                alert('Preencha os dados corretamente')
+            }
+            console.log(err.message)
         })
     }
 
@@ -70,7 +77,7 @@ export default function Register() {
             required>
             </Input>
 
-            <Button type={'submit'} >Entrar</Button>
+            <Button type={'submit'} >Cadastrar</Button>
         </Form>
         <StyledLink to='/'>Já tem um conta? Entre agora!</StyledLink>
     </Container>
