@@ -5,6 +5,7 @@ import api from "../../services/api"
 import AuthContext from "../../contexts/AuthContext";
 import { useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import dayjs from "dayjs";
 
 export default function Trade() {
     const { auth } = useContext(AuthContext)
@@ -12,6 +13,7 @@ export default function Trade() {
     const navigate = useNavigate()
 
     const [tradeForm, setTradeForm] = useState({
+        date:  dayjs().format("DD-MM"),
         value:'',
         description:'',
         type:`${type}`

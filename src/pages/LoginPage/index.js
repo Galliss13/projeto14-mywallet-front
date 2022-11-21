@@ -11,7 +11,6 @@ export default function Login() {
     const {authLogin, auth} = useContext(AuthContext)
     const navigate = useNavigate()
     const [loginForm, setLoginForm] = useState({email:'', password:''})
-    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         if (auth?.token) {
